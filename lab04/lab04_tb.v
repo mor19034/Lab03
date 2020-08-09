@@ -6,6 +6,10 @@ wire out1, out2, out3, out4; //Son las salidas de las primeras 4 tablas
 reg p8, p9, p10, p11, p12, p13, p14; //Estos son para las 4 tablas del ejercicio 2
 wire out5, out6, out7, out8; //Salidas de las cuatro tablas del ejercicio 2
 
+//entradas y salidas para ejercicio 5
+reg s1, s2, s3, s4, s5, s6; //entradas, en este caso, los sensores
+wire SE0, SE1, SE2, SE3, SE4, SE5; //son tres salidas porque son tres ecuaciones
+
 //Ejercicio 1, tabla01 y tabla02
 Ejercicio1_tabla1 G1(p1, p2, p3, out1);
 Ejercicio1_tabla2 G2(p1, p2, p3, out2);
@@ -105,8 +109,53 @@ $monitor("%b %b %b | %b %b", p12, p13, p14, out7, out8);
   #1 p14 = 1;
 end
 
+//Ejercicio 5, ecuaciones POS, SOP y reducida
+Ejercicio5_SOP SOP(s1, s2, s3, SE0);
+Ejercicio5_POS POS(s1, s2, s3, SE1);
+Ejercicio5_reducido R(s1, s2, s3, SE2);
+
+initial begin
+#49
+$display("\n");
+$display("Tabla ejercio 5 con operadores logicos SOP, POS y reducido");
+$display("A VP SM | SE0 SE1 SE2");
+$display("--------|------------");
+$monitor("%b %b %b | %b %b %b", s1, s2, s3, SE0, SE1, SE2);
+     s1 = 0; s2 = 0; s3 = 0;
+  #1 s3 = 1;
+  #1 s2 = 1; s3 = 0;
+  #1 s3 = 1;
+  #1 s1 = 1; s2 = 0; s3 = 0;
+  #1 s3 = 1;
+  #1 s2 = 1; s3 =0;
+  #1 s3 = 1;
+end
+
+//Ejercicio 5, ecuaciones POS, SOP y reducida
+Ejercicio5_GSOP GSOP(s4, s5, s6, SE3);
+Ejercicio5_GPOS GPOS(s4, s5, s6, SE4);
+Ejercicio5_Greducido GR(s4, s5, s6, SE5);
+
+initial begin
+#57
+$display("\n");
+$display("Tabla ejercio 5 con Gate modeling SOP, POS y reducido");
+$display("A VP SM | SE3 SE4 SE5");
+$display("--------|------------");
+$monitor("%b %b %b | %b %b %b", s4, s5, s6, SE3, SE4, SE5);
+
+     s4 = 0; s5 = 0; s6 = 0;
+  #1 s6 = 1;
+  #1 s5 = 1; s6 = 0;
+  #1 s6 = 1;
+  #1 s4 = 1; s5 = 0; s6 = 0;
+  #1 s6 = 1;
+  #1 s5 = 1; s6 =0;
+  #1 s6 = 1;
+end
+
 initial
-  #49 $finish;
+  #70 $finish;
 
   initial begin
     $dumpfile("lab04_tb.vcd");

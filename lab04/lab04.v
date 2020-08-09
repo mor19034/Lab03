@@ -98,3 +98,70 @@ module Ejercicio2_tabla4 (input wire A, B, C, output wire Y);
   assign Y = (B) | (~A & ~C);
 
 endmodule // Ejercicio2_tabla4
+
+//Ejercicio 5, y explicacion de las variables de entrada A = Sistema de alarma armado
+//VP = sensor de ventana/puerta, SM = sensor de movimiento
+//Var. de salida, SE = sonar alarma y encender las luces
+
+//Ecuacion SOP, SE = (A*VP'*SM')+(A*VP'*SM)+(A*VP*SM)+
+module Ejercicio5_SOP (input wire A, VP, SM, output wire SE);
+
+  assign SE = (A & ~VP & ~SM) | (A & ~VP & SM) | (A & VP & SM);
+
+endmodule //Ejercicio5_SOP
+
+//Ecuacion POS, SE = (A+VP+SM)*(A+VP+SM')*(A+VP'+SM)*(A+VP'+SM')*(A'+VP'+SM)
+module Ejercicio5_POS (input wire A, VP, SM, output wire SE);
+
+  assign SE = (A | VP | SM) & (A | VP | ~SM) & (A | ~VP | SM) & (A | ~VP | ~SM) & (~A | ~VP | SM);
+
+endmodule //Ejercicio5_POS
+
+//Ecuacion reducida, SE = (A*VP')+(A*SM)
+module Ejercicio5_reducido (input wire A, VP, SM, output wire SE);
+
+  assign SE = (A & ~VP) | (A & SM);
+
+endmodule //Ejercicio5_reducido
+
+//Modulos para gate lavel modeling
+
+module Ejercicio5_GSOP (input wire A, B, C, output wire Y);
+
+  wire NB, NC, W1, W2, W3; //TRES MODUOS AND
+
+  not(NB, B);
+  not(NC, C);
+  and(W1, A, NB, NC);
+  and(W2, A, NB, C);
+  and(W3, A, B, C);
+  or(Y, W1, W2, W3); //SALIDA
+
+endmodule //Ejercicio5_GSOP
+
+module Ejercicio5_GPOS (input wire A, B, C, output wire Y);
+
+  wire NA, NB, NC, W1, W2, W3, W4, W5;
+
+  not(NA, A);
+  not(NB, B);
+  not(NC, C);
+  or(W1, A, B, C);
+  or(W2, A, B, NC);
+  or(W3, A, NB, C);
+  or(W4, A, NB, NC);
+  or(W5, NA, NB, C);
+  and(Y, W1, W2, W3, W4, W5); //SALIDA
+
+endmodule //Ejercicio5_GPOS
+
+module Ejercicio5_Greducido (input wire A, B, C, output wire Y);
+
+wire NB, W1, W2; //dos modulos and
+
+not(NB, B);
+and(W1, A, NB);
+and(W2, A, C);
+or(Y, W1, W2);
+
+endmodule //Ejercicio5_Greducido
