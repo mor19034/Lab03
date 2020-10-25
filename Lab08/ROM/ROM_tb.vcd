@@ -1,0 +1,76 @@
+$date
+	Sat Oct 24 21:03:32 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbenchROM $end
+$var wire 8 ! data [7:0] $end
+$var reg 12 " address [11:0] $end
+$scope module Prueba $end
+$var wire 12 # address [11:0] $end
+$var wire 8 $ data [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b11001010 !
+b11001010 $
+b0 "
+b0 #
+#2
+b11101111 !
+b11101111 $
+b1 "
+b1 #
+#3
+b101011 !
+b101011 $
+b10 "
+b10 #
+#4
+b1101001 !
+b1101001 $
+b11 "
+b11 #
+#5
+b1 !
+b1 $
+b100 "
+b100 #
+#6
+b10000 !
+b10000 $
+b101 "
+b101 #
+#7
+b11101111 !
+b11101111 $
+b110 "
+b110 #
+#8
+b11001010 !
+b11001010 $
+b111 "
+b111 #
+#9
+b10111110 !
+b10111110 $
+b1000 "
+b1000 #
+#10
+b11001010 !
+b11001010 $
+b1001 "
+b1001 #
+#21

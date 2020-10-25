@@ -83,6 +83,18 @@ mux8 T2_8(V, G, G, G, G, V, V, G, A, B, C, Y);
 endmodule // Tabla2_8
 
 //mux4
+module Tabla2_4 (input wire A, B, C, output wire Y);
+
+wire Cs, CNO, GND;
+
+assign Cs = C;
+assign CNO = ~C;
+assign GND = 0;
+
+mux4 T2_4(CNO, GND, Cs, CNO, A, B, Y);
+
+endmodule // Tabla2_4
+
 
 
 //implementacion del modulo mux4

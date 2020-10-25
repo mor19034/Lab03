@@ -1,0 +1,72 @@
+$date
+	Sat Oct 24 20:38:47 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbenchALU $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 4 # B [3:0] $end
+$var reg 3 $ Command [2:0] $end
+$scope module Prueba $end
+$var wire 4 % A [3:0] $end
+$var wire 4 & B [3:0] $end
+$var wire 3 ' Command [2:0] $end
+$var reg 4 ( Out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b1 !
+b1 (
+b0 $
+b0 '
+b1 #
+b1 &
+b1 "
+b1 %
+#2
+b1 $
+b1 '
+#3
+b10 !
+b10 (
+b10 $
+b10 '
+#4
+b0 !
+b0 (
+b11 $
+b11 '
+#5
+b100 $
+b100 '
+#6
+b1111 !
+b1111 (
+b101 $
+b101 '
+#7
+b0 !
+b0 (
+b110 $
+b110 '
+#8
+b111 $
+b111 '
+#21
