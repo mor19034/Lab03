@@ -1,0 +1,90 @@
+$date
+	Sat Nov 07 12:16:42 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 4 ! out [3:0] $end
+$var wire 1 " Zero $end
+$var wire 1 # Carry $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$var reg 3 & Command [2:0] $end
+$scope module test $end
+$var wire 4 ' A [3:0] $end
+$var wire 4 ( B [3:0] $end
+$var wire 3 ) Command [2:0] $end
+$var reg 1 # Carry $end
+$var reg 4 * Out [3:0] $end
+$var reg 5 + S [4:0] $end
+$var reg 1 " Zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+bx (
+bx '
+bx &
+bx %
+bx $
+x#
+x"
+bx !
+$end
+#1
+b1 !
+b1 *
+1"
+0#
+b1 +
+b0 &
+b0 )
+b111 %
+b111 (
+b1 $
+b1 '
+#3
+b111 !
+b111 *
+b111 +
+b10 &
+b10 )
+#5
+b0 !
+b0 *
+0"
+1#
+b10000 +
+b11 &
+b11 )
+b1000 %
+b1000 (
+b1000 $
+b1000 '
+#7
+1"
+0#
+b0 +
+b1 &
+b1 )
+b111 %
+b111 (
+b111 $
+b111 '
+#9
+b1000 !
+b1000 *
+0"
+1#
+b11000 +
+b100 &
+b100 )
+#21

@@ -1,0 +1,144 @@
+$date
+	Sat Nov 07 18:23:52 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 8 ! program_byte [7:0] $end
+$var wire 4 " oprnd [3:0] $end
+$var wire 4 # instr [3:0] $end
+$var reg 1 $ CLK $end
+$var reg 1 % ENC $end
+$var reg 1 & ENF $end
+$var reg 1 ' ENload $end
+$var reg 1 ( Reset $end
+$var reg 12 ) load [11:0] $end
+$scope module test $end
+$var wire 1 % ENC $end
+$var wire 1 & ENF $end
+$var wire 1 ' ENload $end
+$var wire 12 * Load [11:0] $end
+$var wire 1 ( RESET $end
+$var wire 1 $ clk $end
+$var wire 8 + program_byte [7:0] $end
+$var wire 4 , oprnd [3:0] $end
+$var wire 4 - instr [3:0] $end
+$var wire 12 . PC [11:0] $end
+$scope module C1 $end
+$var wire 1 $ CLK $end
+$var wire 1 % En $end
+$var wire 1 ' LA $end
+$var wire 12 / load [11:0] $end
+$var wire 1 ( reset $end
+$var reg 12 0 Out [11:0] $end
+$upscope $end
+$scope module FET $end
+$var wire 1 $ CLK $end
+$var wire 1 & EN $end
+$var wire 1 1 En $end
+$var wire 1 ( reset $end
+$var wire 4 2 Q2 [3:0] $end
+$var wire 4 3 Q1 [3:0] $end
+$var wire 8 4 DF [7:0] $end
+$scope module Fetch1 $end
+$var wire 1 $ CLK $end
+$var wire 4 5 D [3:0] $end
+$var wire 1 1 En $end
+$var wire 1 ( reset $end
+$var reg 4 6 Q [3:0] $end
+$upscope $end
+$scope module Fetch2 $end
+$var wire 1 $ CLK $end
+$var wire 4 7 D [3:0] $end
+$var wire 1 1 En $end
+$var wire 1 ( reset $end
+$var reg 4 8 Q [3:0] $end
+$upscope $end
+$upscope $end
+$scope module R1 $end
+$var wire 12 9 address [11:0] $end
+$var wire 8 : data [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+z1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+x(
+x'
+x&
+x%
+x$
+bx #
+bx "
+bx !
+$end
+#1
+b0 )
+b0 *
+b0 /
+0&
+0'
+0%
+0(
+#3
+b0 7
+b1 5
+b1 !
+b1 +
+b1 4
+b1 :
+b0 .
+b0 0
+b0 9
+b0 #
+b0 -
+b0 3
+b0 6
+b0 "
+b0 ,
+b0 2
+b0 8
+1(
+#5
+0(
+#7
+1%
+#8
+1&
+#9
+1'
+#14
+1(
+#15
+0(
+#17
+b1000 .
+b1000 0
+b1000 9
+b1000 )
+b1000 *
+b1000 /
+#30

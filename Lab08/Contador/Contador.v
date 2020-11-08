@@ -1,4 +1,4 @@
-//Contador de 15 bits
+//Contador de 12 bits
 
 module contador (
   input wire CLK, reset, En, LA, //En es el Enabled y LA es el bit que activa el Load.
