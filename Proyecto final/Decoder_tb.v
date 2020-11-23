@@ -1,15 +1,15 @@
 module testDecode();
 
-reg [6:0]In;
+reg [6:0]IN;
 wire [12:0]OUT;
 
-DECODE MROM(IN, OUT);
+Decode U1(IN, OUT);
 
 initial begin
 #4300
 $display("      IN      | Funcion  ");
 $monitor("      %b               %b", IN, OUT);
-I = 7'b??????0;
+   IN = 7'b??????0;
 #2 IN = 7'b00001?1;
 #2 IN = 7'b00000?1;
 #2 IN = 7'b00011?1;

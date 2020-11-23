@@ -7,7 +7,7 @@ wire carry;
 wire zero;
 wire [3:0]S;
 
-ALUL10_up calc(A, B, command, carry, zero, S);
+ALU U1(A, B, command, carry, zero, S);
 
 
 initial begin

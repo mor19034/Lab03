@@ -2,7 +2,7 @@ module testRom();
 wire [7:0]data;
 reg [11:0]addres;
 
-PROM_uP MR(addres, data);
+ROM U1(addres, data);
 
 initial begin
 #4700
