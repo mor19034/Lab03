@@ -1,3 +1,5 @@
+//PABLO MORENO LEMUS
+//19034, sección 11
 //TODOS LOS MODULOS DE AQUI SON SOLO LOS COMPONENTES INDIVIDUALES
 
 module counter (input clk, reset, enabled, load, input [11:0] loadData, output reg [11:0] outValue);
